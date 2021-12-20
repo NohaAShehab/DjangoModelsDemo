@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'reviews.apps.ReviewsConfig',
+    'blog.apps.BlogConfig',
     'books.apps.BooksConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -55,7 +57,9 @@ ROOT_URLCONF = 'challenge.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / "templates"
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

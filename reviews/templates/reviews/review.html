@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form class="form" method="Post" action="">
+        {% csrf_token %}
+<!--        <label class="form-control"> Review</label>-->
+<!--        <input  class="form-control" name="username" type="text" >-->
+
+
+        <input class="form-control btn btn-success" type="submit">
+    </form>
+</div>
+{%endblock%}

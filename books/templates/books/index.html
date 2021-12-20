@@ -1,12 +1,33 @@
-{% extends 'books/base.html' %}
+{% extends 'base.html' %}
+
+{% block head %}
+        Book list
+{% endblock %}
+
 {% block content %}
-    {{books}}
+<!--    {{books}}-->
+ <table class="table table-danger table-striped">
+    <tr>
+       <th>ID</th>   <th>Title</th>   <th>Rating</th>
+    </tr>
+
     {% for book in books %}
-
-        <li> <a href="{{book.get_absolute_url}}"> {{book.title}}</a> {{book.rating}}  </li>
+       <tr>
+          <td> <a href="{{book.get_absolute_url}}"> {{book.id}} </a></td>   <td>{{book.title}}</td>
+            <td>{{book.rating}}</td>
+       </tr>
     {% endfor %}
+ </table>
 
-    {{count}}
 
-    {{avg_rating.rating__avg}}
+<h1> Information </h1>
+    <table class="table">
+        <tr>
+            <th>Count</th> <td>  {{count}}</td>
+        </tr>
+        <tr>
+            <th>Rating</th> <td>  {{avg_rating.rating__avg}}</td>
+        </tr>
+    </table>
+
 {% endblock %}
