@@ -21,7 +21,8 @@ urlpatterns = [
     path('', include("monthly_challenge.urls")),
     path('books/', include("books.urls")),
     path('blog/', include("blog.urls")),
-    path('reviews/', include("reviews.urls"))
+    path('reviews/', include("reviews.urls")),
+    path('profiles/', include("profiles.urls")),
 
 
 ]
